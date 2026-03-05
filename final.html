@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ethan Coppin™ — The Legendary Finale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: radial-gradient(circle at top, #0a0a0a, #000);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .hero-final {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero-final h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: gold;
+            text-shadow: 0 0 10px gold;
+        }
+
+        .hero-final h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .credits {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+
+        .credits span {
+            font-weight: 700;
+            color: gold;
+        }
+
+        .kahoot-btn {
+            margin-top: 40px;
+            padding: 20px 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: linear-gradient(45deg, gold, orange);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .kahoot-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .final-message {
+            margin-top: 40px;
+            font-size: 1.5rem;
+            color: white;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-final">
+        <h1>🎉 Légende Terminée ! 🎉</h1>
+        <h2>Merci d’avoir suivi la saga d’Ethan Coppin</h2>
+        <div class="credits">
+            Crédits : <br>
+            <span>Mattéo</span>, <span>Timéo</span>, <span>ChatGPT</span>, <span>Gwendoline Bisiaux</span>, <span>Geoffrey Coppin</span>, <span>Lucas Salon</span>, <span>GitHub</span>, <span>Narko</span>
+        </div>
+        <div class="final-message">
+            On va finir avec un Kahoot ! <br>
+            Attention : <strong>une erreur = un shoot de vodka 🍸</strong>
+        </div>
+        <button class="kahoot-btn" onclick="kahootStart()">Lancer le Kahoot</button>
+    </section>
+    <script>
+        function kahootStart() {
+            alert("🔥 Préparez-vous ! Le Kahoot d’Ethan commence… et souvenez-vous : une erreur = un shoot de vodka !");
+        }
+    </script>
+</body>
+</html>

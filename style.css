@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #000;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: radial-gradient(circle at center, #111 0%, #000 70%);
+}
+.title {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.5s ease forwards;
+}
+.subtitle {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.5s ease forwards;
+    animation-delay: 0.5s;
+}
+button {
+    margin-top: 40px;
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, gold, orange);
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.5s ease forwards;
+    animation-delay: 1s;
+}
+button:hover {
+    transform: scale(1.05);
+}
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.navbar a:hover {
+    color: gold;
+}
+.era {
+    padding: 120px 10%;
+    min-height: 100vh;
+}
+.era h1 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+.era h2 {
+    margin-bottom: 60px;
+    font-weight: 300;
+    opacity: 0.7;
+}
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image {
+    flex: 1;
+    min-width: 300px;
+}
+.text p {
+    margin-bottom: 20px;
+}
+.highlight {
+    color: gold;
+    font-weight: 600;
+}
+.image img {
+    width: 100%;
+    max-height: 500px;  
+    object-fit: cover; 
+    border-radius: 12px;
+    transition: 0.5s;
+}
+.image img:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+    }
+}
+.gallery {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;        /* prend toute la largeur de la case */
+    height: 200px;      /* hauteur fixe pour toutes */
+    object-fit: cover;  /* garde le ratio et recadre si nécessaire */
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+/* Galerie pour 6 photos */
+.gallery {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+.final-message {
+    margin-top: 60px;
+    text-align: center;
+    background: radial-gradient(circle, gold, transparent);
+    padding: 40px 20px;
+    border-radius: 12px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px gold; }
+    100% { box-shadow: 0 0 30px gold; }
+}
